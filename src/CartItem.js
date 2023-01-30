@@ -12,9 +12,34 @@ export default class CartItem extends Component {
         // this.increaseQuantity = this.increaseQuantity.bind(this);
     }
     increaseQuantity = () => {
+        // this.state.qty += 1;
         console.log('this' , this.state);
 
+        // setstate form 1
+        // this.setState({
+        //     qty:this.state.qty +1
+        // });
+
+        this.setState((prevState) => {
+            return{
+                qty:prevState.qty +1
+            }
+        })
+
     }
+    decreaseQuantity=() =>{
+        console.log('this',this.state);
+        this.setState({
+            qty:this.state.qty -1
+        })
+        
+    }
+    deleteQuantity =() =>{
+        this.setState({
+            qty:0
+        })
+    }
+    
     render() {
         const { price, title, qty } = this.state;
         return (
@@ -26,7 +51,7 @@ export default class CartItem extends Component {
                 </div>
                 <div className='right-block'>
 
-                    <div style={{ fontSize: 25 }}>{title}</div>
+                    <div style={{ fontSize: 25 ,color:'blue'}}>{title}</div>
                     <div style={{ color: '#777' }}>Rs {price}</div>
                     <div style={{ color: '#777' }}>Qty: {qty}</div>
                     <div className='cart-item-actions'>
@@ -41,11 +66,13 @@ export default class CartItem extends Component {
                             alt="decerase"
                             className='action-icons'
                             src='https://cdn-icons-png.flaticon.com/512/992/992683.png' 
+                            onClick={this.decreaseQuantity}
                             />
                         <img
                             alt="delete"
                             className='action-icons'
                             src='https://cdn-icons-png.flaticon.com/512/1214/1214428.png'
+                            onClick={this.deleteQuantity}
                             />
                     </div>
 
