@@ -16,18 +16,24 @@ export default class CartItem extends Component {
         console.log('this' , this.state);
 
         // setstate form 1
-        // this.setState({
-        //     qty:this.state.qty +1
-        // });
+        this.setState({
+            qty:this.state.qty +1
+        });
 
-        this.setState((prevState) => {
-            return{
-                qty:prevState.qty +1
-            }
-        })
+        // this.setState((prevState) => {
+        //     return{
+        //         qty:prevState.qty +1
+        //     }
+        // })
 
     }
     decreaseQuantity=() =>{
+
+        const {qty} = this.state;
+
+        if(qty === 0){
+            return;
+        }
         console.log('this',this.state);
         this.setState({
             qty:this.state.qty -1
@@ -35,6 +41,7 @@ export default class CartItem extends Component {
         
     }
     deleteQuantity =() =>{
+        
         this.setState({
             qty:0
         })
