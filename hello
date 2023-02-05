@@ -1,0 +1,47 @@
+[33mcommit 4e567dfa781148949c0a42bd529b42687ca99250[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: utkarsh <singhrishu680@gmail.com>
+Date:   Sun Feb 5 12:55:40 2023 +0530
+
+    adding cart component
+
+[33mcommit 3e6d1081bbd10a3324d57aed5e423a3f4b391653[m
+Author: utkarsh <singhrishu680@gmail.com>
+Date:   Tue Jan 31 17:55:26 2023 +0530
+
+    setState in depth
+
+[33mcommit 07ae213ab232ad5c673200cd9f9b4e199db2d957[m
+Author: utkarsh <singhrishu680@gmail.com>
+Date:   Tue Jan 31 01:26:37 2023 +0530
+
+    modify state or setState
+
+[33mcommit 63f71b8cbc75704db433ed3a1aec58ff05650d26[m
+Author: utkarsh <singhrishu680@gmail.com>
+Date:   Mon Jan 30 23:09:31 2023 +0530
+
+    add increase quantity function
+
+[33mcommit 38d8165f133c975ea93106b4b720df66abed4ca5[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: utkarsh <singhrishu680@gmail.com>
+Date:   Mon Jan 30 22:38:25 2023 +0530
+
+    add constructor and use
+
+[33mcommit 04b900cfd8b951490b52d2f9af270189c0095353[m
+Author: utkarsh <singhrishu680@gmail.com>
+Date:   Mon Jan 30 21:26:46 2023 +0530
+
+    Add cartItem Component
+
+[33mcommit 011e5754c3df2bb2548ba0e6e55e597b7bea2ec8[m
+Author: utkarsh <singhrishu680@gmail.com>
+Date:   Mon Jan 30 16:13:32 2023 +0530
+
+    color change
+
+[33mcommit 17cd2ef882dce458a4acd1615c888e2f730ebc27[m
+Author: utkarsh <singhrishu680@gmail.com>
+Date:   Mon Jan 30 15:54:07 2023 +0530
+
+    Intitial commit
