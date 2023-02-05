@@ -8,7 +8,7 @@ export default class CartItem extends Component {
             <div className='cart-item'>
                 <div className='left-block'>
 
-                    <img style={styles.image} />
+                    <img style={styles.image} src ={product.img}/>
 
                 </div>
                 <div className='right-block'>
@@ -51,6 +51,6 @@ const styles = {
         width: 110,
         borderRadius: 4,
         background: '#ccc',
-        backgroundImage: "url('https://img.freepik.com/free-photo/top-view-indian-food-assortment_23-2148747714.jpg?w=1380&t=st=1675095396~exp=1675095996~hmac=bea9ba5cb3d48299f4eca03434758ec9b6a70b2fb8b9681542bcc60439a0ee1a')"
+        
     }
 }
