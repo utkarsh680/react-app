@@ -12,6 +12,7 @@ class App extends React.Component {
       loading:true
 
     }
+    this.db = firebase.firestore();
   }
 
   componentDidMount () {
@@ -34,8 +35,7 @@ class App extends React.Component {
     //     loading:false
     //   })
     // })
-    firebase
-    .firestore()
+    this.db
     .collection('products')
     .onSnapshot((snapshot) => {
       console.log(snapshot);
@@ -115,11 +115,31 @@ class App extends React.Component {
     <h2>This is a Demo class component!</h2>;
   }
 
+  addProduct = () => {
+    this.db
+    .collection('products')
+    .add({
+      img:'',
+      price:900,
+      qty:3,
+      titile: "washing Machine"
+    })
+    .then((docRef) => {
+      console.log('product has been added',docRef);
+    })
+    .catch((error) =>{
+      console.log('error',error)
+    })
+
+
+  }
+
   render() {
     const { products, loading } = this.state;
     return (
       <div className="App">
         <Navbar count={this.getCartCount()} />
+        <button onClick={this.addProduct} style ={{padding:20, fontSize:20}}>Add a button</button>
         <Cart
           products={products}
           onIncreaseQuantity={this.handleIncreaseQuantity}
