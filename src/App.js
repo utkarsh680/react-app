@@ -106,13 +106,23 @@ class App extends React.Component {
   handleDeleteProduct = (id) => {
     const { products } = this.state;
 
-    const items = products.filter((items) => items.id !== id);
+    // const items = products.filter((items) => items.id !== id);
 
-    this.setState({
-      products: items
-    }
+    // this.setState({
+    //   products: items
+    // }
 
-    )
+    // )
+    const docRef = this.db.collection('products').doc(id);
+    docRef
+    .delete()
+    .then(() => {
+      console.log('Delete successfully')
+    })
+    .catch((error) => {
+      console.log('error', error);
+    }) 
+
   }
   getCartCount = () => {
     const { products } = this.state;
